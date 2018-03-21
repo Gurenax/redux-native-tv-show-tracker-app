@@ -11,6 +11,8 @@ import {
   Body
 } from 'native-base'
 
+import { stripHtmlTags, arrayToCSV } from '../../helpers/stringHelpers'
+
 const ShowListItem = ({
   show
 }) => (
@@ -20,7 +22,7 @@ const ShowListItem = ({
         <Thumbnail source={{ uri: (!!show.image && show.image.medium) }} />
         <Body>
           <Text>{show.name}</Text>
-          <Text note>April 15, 2016</Text>
+          <Text note>{ arrayToCSV(show.genres) }</Text>
         </Body>
       </Left>
     </CardItem>
@@ -30,7 +32,7 @@ const ShowListItem = ({
           source={{ uri: (!!show.image && show.image.medium) }}
           style={{ height: 200, width: '100%', flex: 1, resizeMode: 'cover'  }}
         />
-        <Text>{show.summary.replace(/<\/?[^>]+(>|$)/g, "")}</Text>
+        <Text>{ stripHtmlTags(show.summary) }</Text>
       </Body>
     </CardItem>
     <CardItem>
