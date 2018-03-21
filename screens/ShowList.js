@@ -23,6 +23,11 @@ import {
 } from 'native-base'
 
 /*
+* Components
+*/
+import ShowListItem from '../components/ShowList/ShowListItem'
+
+/*
 * Actions
 */
 import { loadShowList, loadShowListSuccess } from '../actions/ShowList'
@@ -37,7 +42,10 @@ class ShowList extends Component {
 
     return showList.shows.map(showItem => {
       const show = showItem.show
-      return <Label key={show.id}>{show.name}</Label>
+      return <ShowListItem
+              key={show.id}
+              show={show}
+              />
     })
   }
 
@@ -62,7 +70,6 @@ class ShowList extends Component {
           </Button>
         </Header>
         <Content>{this.renderList()}</Content>
-        <Footer />
       </Container>
     )
   }
