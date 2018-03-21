@@ -1,4 +1,17 @@
-This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
+# TV Show Tracker App
+A TV show tracker app rebuilt using React Native, Redux and Redux Saga. The original project is built using react/redux/redux-thunk https://github.com/Gurenax/redux-tv-show-tracker-app
+
+## Tech Stack
+* React
+* React Native
+* React Router
+* Redux
+* Redux Saga
+* Axios
+
+
+
+## This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
 
